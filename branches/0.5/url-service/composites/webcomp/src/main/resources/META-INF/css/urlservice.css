@@ -1,0 +1,48 @@
+body { 
+	margin:10px; 
+}
+
+label {
+	width: 100px;
+	display: block;
+	float: left;
+}
+
+.input300  {
+	width: 300px;
+    border: 1px solid black;
+}
+
+.tags {
+    border: 1px solid black;
+    padding: 1px;
+    overflow: auto;
+}
+
+.tags span, .tag {
+    background-color: #ccc;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-right: 1px;
+}
+
+.tags span.x {
+    cursor: pointer;
+    padding-left: 3px;
+    margin-right: 4px;
+}
+
+
+.tags input {
+    border: 1px solid #eee;
+    width: 50px;
+}
+
+.longurl {
+	margin-right: 10px;
+}
+
+#users li {
+	list-style: none;
+	display: inline;
+}

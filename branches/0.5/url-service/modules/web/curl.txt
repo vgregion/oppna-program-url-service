@@ -1,0 +1,36 @@
+====
+    Copyright 2010 Västra Götalandsregionen
+
+      This library is free software; you can redistribute it and/or modify
+      it under the terms of version 2.1 of the GNU Lesser General Public
+      License as published by the Free Software Foundation.
+
+      This library is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      GNU Lesser General Public License for more details.
+
+      You should have received a copy of the GNU Lesser General Public
+      License along with this library; if not, write to the
+      Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+      Boston, MA 02111-1307  USA
+
+====
+
+# shorten a few link
+curl "http://localhost:8080/api/v3/shorten?longUrl=http://example.com"
+curl "http://localhost:8080/api/v3/shorten?longUrl=http://example.com/1"
+
+# now expand them
+curl "http://localhost:8080/api/v3/expand?hash=a9b9f0"
+curl "http://localhost:8080/api/v3/expand?hash=a9b9f0&hash=9be0f2"
+
+curl "http://localhost:8080/api/v3/expand?shortUrl=http://s.vgregion.se/a9b9f0&hash=9be0f2"
+
+curl "http://localhost:8080/api/v3/expand?hash=a9b9f0&format=xml"
+curl "http://localhost:8080/api/v3/expand?hash=a9b9f0&format=txt"
+
+
+
+# now redirect
+curl -v "http://localhost:8080/a9b9f0"
